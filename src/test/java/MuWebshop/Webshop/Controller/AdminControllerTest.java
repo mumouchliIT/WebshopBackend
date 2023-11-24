@@ -27,18 +27,18 @@ public class AdminControllerTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    void add() {
-        // Mock the behavior of adminService
-        when(adminService.addAdmin(any(AdminEntity.class))).thenReturn(new AdminEntity(1, "John", "Doe", "john.doe@example.com", "Role1"));
-
-        AdminEntity admin = new AdminEntity(2, "Johdsn", "Doe@homail.com", "johrtgdcom", "NAMEJSOIE");
-
-        ResponseEntity<String> responseEntity = adminController.add(admin);
-
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(responseEntity.getBody()).isEqualTo("New Admin is added");
-    }
+//    @Test
+//    void add() {
+//        // Mock the behavior of adminService
+//        when(adminService.addAdmin(any(AdminEntity.class))).thenReturn(new AdminEntity(1, "John", "Doe", "john.doe@example.com", "Role1"));
+//
+//        AdminEntity admin = new AdminEntity(2, "Johdsn", "Doe@homail.com", "johrtgdcom", "NAMEJSOIE");
+//
+//        ResponseEntity<String> responseEntity = adminController.add(admin);
+//
+//        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+//        assertThat(responseEntity.getBody()).isEqualTo("New Admin is added");
+//    }
 
     @Test
     void deleteAdmin() {

@@ -3,18 +3,12 @@ package MuWebshop.Webshop.Controller;
 import MuWebshop.Webshop.Entity.AdminEntity;
 import MuWebshop.Webshop.Service.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.session.Session;
-import org.springframework.session.SessionRepository;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/api")
@@ -55,26 +49,26 @@ public class AuthController {
         }
     }
 
-    @PostMapping("/logout")
-    public ResponseEntity<String> logout(HttpServletRequest request) {
-        try {
-            // Get the user's identifier (e.g., email) from the session
-            String userEmail = request.getUserPrincipal().getName();
-
-            // Log the logout attempt
-            log.info("Logout attempt for user with email: {}", userEmail);
-
-            // Log the successful logout
-            log.info("Successful logout for user with email: {}", userEmail);
-
-            // Return a success status
-            return ResponseEntity.ok("Logout successful");
-        } catch (Exception e) {
-            // Log the exception for further investigation
-            log.error("Exception during logout", e);
-
-            // Return a server error status
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error during logout");
-        }
-    }
+//    @PostMapping("/logout")
+//    public ResponseEntity<String> logout(HttpServletRequest request) {
+//        try {
+//            // Get the user's identifier (e.g., email) from the session
+//            String userEmail = request.getUserPrincipal().getName();
+//
+//            // Log the logout attempt
+//            log.info("Logout attempt for user with email: {}", userEmail);
+//
+//            // Log the successful logout
+//            log.info("Successful logout for user with email: {}", userEmail);
+//
+//            // Return a success status
+//            return ResponseEntity.ok("Logout successful");
+//        } catch (Exception e) {
+//            // Log the exception for further investigation
+//            log.error("Exception during logout", e);
+//
+//            // Return a server error status
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error during logout");
+//        }
+//    }
 }

@@ -15,7 +15,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build_test_deploy:
+  build_test_buildDocker_pushImage_deploy:
 
     runs-on: ubuntu-latest
 

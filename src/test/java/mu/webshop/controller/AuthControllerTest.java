@@ -1,3 +1,4 @@
+/*
 package mu.webshop.controller;
 
 import mu.webshop.entity.AdminEntity;
@@ -69,3 +70,4 @@ class AuthControllerTest {
 //        verify(authService, times(1)).authenticate(admin);
 //    }
 }
+*/

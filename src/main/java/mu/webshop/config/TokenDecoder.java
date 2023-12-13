@@ -9,8 +9,10 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class TokenDecoder {
+
     private final TokenProperties properties;
-    public DecodedJWT decode (String token){
+
+    public DecodedJWT decode(String token) {
         return JWT.require(Algorithm.HMAC256(properties.getSecretKey()))
                 .build()
                 .verify(token);

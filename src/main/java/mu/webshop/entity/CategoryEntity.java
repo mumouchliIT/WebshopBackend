@@ -28,6 +28,9 @@ public class CategoryEntity {
     public CategoryEntity(int categoryId) {
         this.id = categoryId;
     }
+    public CategoryEntity(String categoryName) {
+        this.name = categoryName;
+    }
     public CategoryEntity(int id, String name, Set<ProductEntity> products) {
         this.id = id;
         this.name = name;

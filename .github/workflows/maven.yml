@@ -13,7 +13,9 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+permissions:
+  statuses: write
+  checks: write
 jobs:
   build_test_buildDocker_pushImage_deploy:
 

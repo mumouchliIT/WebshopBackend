@@ -132,6 +132,7 @@
 				<version>0.8.11</version>
 			</plugin>
 		</plugins>
+
 		<finalName>
 			updated_mouchli_webshop_dockerhub_image
 		</finalName>
